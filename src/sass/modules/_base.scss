@@ -1,0 +1,151 @@
+@import 'variables';
+
+// NOTE: Copy this code for media query
+// @media (max-width: $break-large) {
+// }
+// @media (max-width: $break-medium) {
+// }
+// @media (max-width: $break-small) {
+// }
+
+*:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  &:focus {
+    outline: none;
+  }
+}
+body {
+  font-family: $font-family;
+  line-height: 1.42857;
+  padding-bottom: 100px;
+  font-size: $text-xlg-h6;
+  color: $clr-dark-grad-2;
+
+  @media (max-width: $break-large) {
+    font-size: $text-lg-h6;
+  }
+  @media (max-width: $break-medium) {
+    font-size: $text-md-h6;
+  }
+  @media (max-width: $break-small) {
+    font-size: $text-sm-h6;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-weight: 400;
+}
+h1 {
+  font-size: $text-xlg-h1;
+  @media (max-width: $break-large) {
+    font-size: $text-lg-h1;
+  }
+  @media (max-width: $break-medium) {
+    font-size: $text-md-h1;
+  }
+  @media (max-width: $break-small) {
+    font-size: $text-sm-h1;
+  }
+}
+h2 {
+  font-size: $text-xlg-h2;
+  @media (max-width: $break-large) {
+    font-size: $text-lg-h2;
+  }
+  @media (max-width: $break-medium) {
+    font-size: $text-md-h2;
+  }
+  @media (max-width: $break-small) {
+    font-size: $text-sm-h2;
+  }
+}
+h3 {
+  font-size: $text-xlg-h3;
+  @media (max-width: $break-large) {
+    font-size: $text-lg-h3;
+  }
+  @media (max-width: $break-medium) {
+    font-size: $text-md-h3;
+  }
+  @media (max-width: $break-small) {
+    font-size: $text-sm-h3;
+  }
+}
+h4 {
+  font-size: $text-xlg-h4;
+  @media (max-width: $break-large) {
+    font-size: $text-lg-h4;
+  }
+  @media (max-width: $break-medium) {
+    font-size: $text-md-h4;
+  }
+  @media (max-width: $break-small) {
+    font-size: $text-sm-h4;
+  }
+}
+h5 {
+  font-size: $text-xlg-h5;
+  @media (max-width: $break-large) {
+    font-size: $text-lg-h5;
+  }
+  @media (max-width: $break-medium) {
+    font-size: $text-md-h5;
+  }
+  @media (max-width: $break-small) {
+    font-size: $text-sm-h5;
+  }
+}
+h6 {
+  font-size: $text-xlg-h6;
+  @media (max-width: $break-large) {
+    font-size: $text-lg-h6;
+  }
+  @media (max-width: $break-medium) {
+    font-size: $text-md-h6;
+  }
+  @media (max-width: $break-small) {
+    font-size: $text-sm-h6;
+  }
+}
+p {
+  font-size: $text-xlg-h6;
+  @media (max-width: $break-large) {
+    font-size: $text-lg-h6;
+  }
+  @media (max-width: $break-medium) {
+    font-size: $text-md-h6;
+  }
+  @media (max-width: $break-small) {
+    font-size: $text-sm-h6;
+  }
+}
+
+pre {
+  white-space: pre-wrap;
+  line-height: 18px;
+}
+td {
+}
+ul, li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: $clr-dark-grad-2;
+}
+.text-center {
+  text-align: center;
+}
+.img-responsive {
+  width: 100%;
+}
+.clearfix {
+  clear: both;
+}

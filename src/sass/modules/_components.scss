@@ -1,0 +1,484 @@
+@import "~sass/modules/variables";
+
+// THE EXTEND STYLES
+// Ouline
+.vlt-form-outline {
+  outline: none;
+}
+// Form controls
+.vlt-input-control {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  padding: 2px 0;
+  font-size: 14px;
+  font-weight: 300;
+  border-radius: 0;
+  -webkit-appearance: none;
+  &:focus {
+    @extend .vlt-form-outline;
+  }
+}
+// Select box
+.vlt-slct-grp {
+  position: relative;
+  .ico-img {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    img {
+      width: 10px;
+    }
+  }
+}
+// Buttons
+.vlt-btn {
+  border: 0;
+  text-transform: uppercase;
+  width: 100%;
+  letter-spacing: 1px;
+  &:focus {
+    @extend .vlt-form-outline;
+  }
+}
+// Button trans
+.btn-trans, .btn-ico {
+  @extend .vlt-btn;
+  background-color: transparent;
+}
+.btn-ico {
+  img {
+    vertical-align: middle;
+  }
+}
+
+// Button Large
+.btn-lg {
+  @extend .vlt-btn;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  min-width: 240px;
+  border-radius: 22px;
+}
+
+// Button Small
+.btn-md {
+  @extend .vlt-btn;
+  padding: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  min-width: 120px;
+  border-radius: 16px;
+}
+
+// Button Small
+.btn-sm {
+  @extend .vlt-btn;
+  padding: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  min-width: 90px;
+  border-radius: 16px;
+  letter-spacing: normal;
+}
+
+.vlt-light {
+  .bg-color {
+    background-color: $clr-dark-grad-1;
+  }
+  .text-color {
+    color: $clr-white-1;
+  }
+  .border-color {
+    border-color: $clr-dark-grad-1;
+  }
+  .invert-bg-color {
+    background-color: $clr-white-1;
+  }
+  .invert-text-color {
+    color: $clr-dark-grad-1;
+  }
+  .invert-border-color {
+    border-color: $clr-white-1;
+  }
+  .primary-bg {
+    color: $clr-dark-grad-1;  /* fallback for old browsers */
+    background: $clr-white-1;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, $clr-white-1, $clr-white-2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, $clr-white-1, $clr-white-2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    &.inverted {
+      color: $clr-white-1;  /* fallback for old browsers */
+      background: $clr-dark-grad-1;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, $clr-dark-grad-1, $clr-dark-grad-2);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, $clr-dark-grad-1, $clr-dark-grad-2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+  }
+  .hollow-bg {
+    color: $clr-white-1;  /* fallback for old browsers */
+    background: transparent;
+    border: 2px solid $clr-white-1;
+    &.inverted {
+      color: $clr-dark-grad-2;  /* fallback for old browsers */
+      background: transparent;
+      border: 2px solid $clr-dark-grad-2;
+      &.success {
+        background: $clr-success-green;
+      }
+      &.error {
+        background: $clr-error-red;
+      }
+    }
+  }
+}
+.vlt-dark {
+  .bg-color {
+    background-color: $clr-white-1;
+  }
+  .text-color {
+    color: $clr-dark-grad-1;
+  }
+  .invert-bg-color {
+    background-color: $clr-dark-grad-1;
+  }
+  .border-color {
+    border-color: $clr-white-1;
+  }
+  .invert-text-color {
+    color: $clr-white-1;
+  }
+  .invert-border-color {
+    border-color: $clr-dark-grad-1;
+  }
+  .primary-bg {
+    color: $clr-dark-grad-1;  /* fallback for old browsers */
+    background: $clr-white-1;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, $clr-white-1, $clr-white-2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, $clr-white-1, $clr-white-2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  .hollow-bg {
+    color: $clr-white-1;  /* fallback for old browsers */
+    background: transparent;
+    border: 2px solid $clr-white-1;
+  }
+}
+.vlt-link {
+  cursor: pointer;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+  &:hover {
+    text-decoration: none;
+  }
+}
+.form-message {
+  text-align: center;
+  color: $clr-gp-red;
+  transition: all 0.3s ease;
+}
+// End of extend
+
+// Hamburger Button
+.btn-hamb {
+  @extend .btn-trans;
+  span {
+    width: 22px;
+    height: 2px;
+    display: block;
+    margin-bottom: 5px;
+    @extend .bg-color;
+  }
+}
+
+// Button Large Primary Large
+.btn-lg-primary {
+  @extend .btn-lg;
+  @extend .primary-bg;
+}
+
+// Button Large Primary Hollow
+.btn-lg-hollow {
+  @extend .btn-lg;
+  padding: 10px;
+  @extend .hollow-bg;
+}
+
+// Button Medium Large
+.btn-md-primary {
+  @extend .btn-md;
+  @extend .primary-bg;
+}
+
+// Button Medium Hollow
+.btn-md-hollow {
+  @extend .btn-md;
+  padding: 6px;
+  @extend .hollow-bg;
+}
+
+// Button Small Large
+.btn-sm-primary {
+  @extend .btn-sm;
+  @extend .primary-bg;
+}
+
+// Button Small Hollow
+.btn-sm-hollow {
+  @extend .btn-sm;
+  padding: 4px;
+  @extend .hollow-bg;
+}
+
+// Facebook Button
+.btn-fb {
+  background-color: $clr-fb-blue;
+  color: $clr-white-1;
+  &.lg {
+    @extend .btn-lg;
+  }
+}
+
+// Google Button
+.btn-gg {
+  background-color: $clr-gp-red;
+  color: $clr-white-1;
+  &.lg {
+    @extend .btn-lg;
+  }
+}
+
+.vlt-btn-ico {
+  background: transparent;
+  border: 0;
+  img {
+    width: 24px;
+  }
+  // Remove the below codes, as we reverted back using images instead
+  // of the FontAwesome icons
+  &.lite {
+    color: $clr-white-1;
+  }
+  &.dark {
+    color: $clr-dark-grad-1;
+  }
+  .fa {
+    font-size: 18px;
+  }
+}
+
+// The material form controls
+.vlt-mtrl-group {
+  position: relative;
+  label {
+    font-size: $text-sm-h6;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+    @extend .invert-text-color;
+    &.error {
+      color: #ef5350;
+    }
+  }
+  .bar {
+    position: relative;
+    display: block;
+    &:before, &:after 	{
+      content: '';
+      height: 1px;
+      width: 0;
+      bottom: 1px;
+      position: absolute;
+      transition: 0.2s ease all;
+      -moz-transition: 0.2s ease all;
+      -webkit-transition: 0.2s ease all;
+      @extend .invert-text-color;
+    }
+    &:before {
+      left: 50%;
+    }
+    &:after {
+      right: 50%;
+    }
+  }
+  .highlight {
+    position: absolute;
+    height: 60%;
+    width: auto;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  input {
+    font-size: $text-sm-h6;
+    padding: 8px 8px 8px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    @extend .invert-text-color;
+    @extend .border-color;
+    &:focus ~ label, &:valid ~ label {
+      top: -14px;
+      font-size: 12px;
+      @extend .invert-text-color;
+      &.error {
+        color: #ef5350;
+      }
+    }
+    &:focus ~ .bar:before, &:focus ~ .bar:after {
+      width: 50%;
+      @extend .bg-color;
+    }
+    &:focus ~ .highlight {
+      -webkit-animation: inputHighlighter 0.3s ease;
+      -moz-animation: inputHighlighter 0.3s ease;
+      animation: inputHighlighter 0.3s ease;
+    }
+  }
+}
+
+@-webkit-keyframes inputHighlighter {
+  from { @extend .invert-bg-color; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+  from { @extend .invert-bg-color; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+  from { @extend .invert-bg-color; }
+  to 	{ width:0; background:transparent; }
+}
+.vlt-form-control {
+  @extend .vlt-input-control;
+  min-width: 200px;
+  &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    @extend .text-color;
+    opacity: 1; /* Firefox */
+  }
+  &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    @extend .text-color;
+  }
+  &::-ms-input-placeholder { /* Microsoft Edge */
+    @extend .text-color;
+  }
+}
+
+.input-ico {
+  position: relative;
+  .ico-img {
+    position: absolute;
+    top: 8px;
+    right: 4px;
+    img {
+      width: 18px;
+      cursor: pointer;
+    }
+  }
+  input {
+    padding-right: 25px;
+  }
+}
+// Select Dropdown
+.vlt-slct-input {
+  @extend .vlt-input-control;
+  height: 32px;
+  width: 100%;
+  padding: 0px 20px 0px 0px;
+  @extend .border-color;
+  @extend .invert-text-color;
+}
+// Radio Button
+.vlt-radio {
+  position: relative;
+  &.inline {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  input {
+    opacity: 0;
+    position: absolute;
+    &:checked {
+      + label::after {
+        width: 7px;
+        height: 7px;
+        left: 4px;
+        top: 6px;
+        border-radius: 50%;
+        @extend .bg-color;
+      }
+    }
+  }
+  label {
+    position: relative;
+    padding-left: 20px;
+    font-weight: 300;
+    &::before, &::after {
+      position: absolute;
+      content: '';
+    }
+    &::before {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      left: 0;
+      top: 2px;
+      border: 2px solid $clr-white-1;
+      @extend .border-color;
+    }
+  }
+}
+// Datepicker
+.mx-input {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+.mx-input-icon {
+  display: none !important;
+}
+// Tag Links
+.vlt-tags {
+  li {
+    display: inline-block;
+    border-radius: 20px;
+    margin-right: 10px;
+    text-align: center;
+    @extend .primary-bg.inverted;
+    .tag-link, a {
+      display: block;
+      font-size: $text-xs;
+      text-transform: uppercase;
+      padding: 2px 10px;
+      min-width: 90px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.vlt-light {
+  .vlt-tags li .tag-link, .vlt-tags li a {
+    color: $clr-white-1;
+  }
+}
+.vlt-dark {
+  .vlt-tags li .tag-link, .vlt-tags li a {
+    color: $clr-dark-grad-1;
+  }
+}
+/* popup-animate */
+.popup-animate-enter-active, .popup-animate-leave-active {
+  transition: opacity .5s;
+}
+.popup-animate-enter, .popup-animate-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
